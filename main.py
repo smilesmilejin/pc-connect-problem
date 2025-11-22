@@ -110,6 +110,10 @@ def bfs_graph(grid, row_index, col_index, visited):
  
 # print(bfs_graph(grid, row_index, col_index))
 
+
+
+
+
 def biggest_group_size(grid):
     pass
  
@@ -152,7 +156,7 @@ def biggest_group_size(grid):
             # print('col: ', col)
  
             # print(grid[row][col])
-            if grid[row][col] == 0:
+            if grid[row][col] == 0 and (row, col) not in visited:
                 # print(grid[row][col])
                 num_zeros = bfs_graph(grid, row, col, visited)
                 max_zeros = max(num_zeros, max_zeros)
